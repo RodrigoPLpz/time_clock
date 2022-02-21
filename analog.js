@@ -55,8 +55,8 @@ timeInput.onchange = (event) => { // listener
   
   setTime(arr[0], arr[1]); // llamar a la herramienta
   hours = arr[0];
-  minutes = [1];
-  seconds = [1];
+  minutes = arr[1];
+  seconds = arr[1];  //**********************?
   //asyn
   clearInterval(interval);
   interval = setInterval(() => {
