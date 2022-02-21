@@ -60,10 +60,10 @@ body{
 }
 .hands > .seconds {
   position: absolute;
-  top:-30px;
+  top:-56px;
   left:3px;
   width:2px;
-  height:35px;
+  height:60px;
   background:#D4F1F4;
   transform:rotate(0deg);
   transform-origin: bottom;
