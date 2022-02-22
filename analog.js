@@ -46,23 +46,23 @@ let interval;
 
 //3.- Se asigna contenido al nodo
 timeInput.onchange = (event) => { // listener
-//2.- Se confgirua nodo
-  clearInterval(interval);
+//2.- Se configura nodo
+  //clearInterval(interval);
   const value = event.target.value // "20:20"
   //console.log(value);
   const arr = value.split(':').map(numText => Number(numText)); 
   // ['20','02'] => [20,02]
-  //console.log(arr);
+  console.log(arr);
   //const hours = Number( value.slice(0,2) )
   //const minutes = Number( value.slice(3) )
-  
   setTime(arr[0], arr[1]); // llamar a la herramienta
   hours = arr[0];
   minutes = arr[1];
-  seconds = arr[0];  //**********************?
+  seconds = 0;
   //asyn
-  //clearInterval(interval);
+  clearInterval(interval);
   interval = setInterval(() => {
+    console.log(seconds);
     seconds++;
     if(seconds > 59){
       seconds = 0;
@@ -76,7 +76,7 @@ timeInput.onchange = (event) => { // listener
       hours = 0;
     }
     setTime(hours,minutes,seconds);
-  } ,100);
+  } ,1000);
 }
 
 
